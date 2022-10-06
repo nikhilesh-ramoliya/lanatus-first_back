@@ -4,6 +4,7 @@ const { movie, show } = require("./Models/Movie")
 const connection = require("./Connections");
 const cors = require("cors");
 
+const port = process.env.PORT||8000;
 
 app.use(cors());
 app.use(express.json());
@@ -57,4 +58,4 @@ app.get("*", (req, res) => {
 
 
 
-app.listen(8000, () => console.log('server is running at port 3000'))
+app.listen(port, () => console.log('server is running at port 3000'))
